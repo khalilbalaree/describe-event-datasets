@@ -1,6 +1,18 @@
 # DescribeEvent Datasets
 
-Seven event-prediction datasets following the temporal point process (TPP) formulation. Each dataset is a gzipped JSONL file (`*.jsonl.gz`) with one sequence per line; each line describes a marked temporal point process, where every event comes with a natural-language description. Decompress with `gunzip <file>.jsonl.gz` (or read directly via `gzip.open` in Python).
+Seven event-prediction datasets following the temporal point process (TPP) formulation. Each dataset is a gzipped JSONL file (`*.jsonl.gz`) with one sequence per line; each line describes a marked temporal point process, where every event comes with a natural-language description.
+
+## Loading the data
+
+Decompress with `gunzip <file>.jsonl.gz` on the command line, or read directly in Python:
+
+```python
+import gzip, json
+
+with gzip.open("github_user_events.jsonl.gz", "rt") as f:
+    for line in f:
+        record = json.loads(line)
+```
 
 ## Dataset format
 
