@@ -1,6 +1,6 @@
 # DescribeEvent Datasets
 
-Seven event-prediction datasets following the temporal point process (TPP) formulation. Each dataset is a JSONL file with one sequence per line; each line describes a marked temporal point process, where every event comes with a natural-language description.
+Seven event-prediction datasets following the temporal point process (TPP) formulation. Each dataset is a gzipped JSONL file (`*.jsonl.gz`) with one sequence per line; each line describes a marked temporal point process, where every event comes with a natural-language description. Decompress with `gunzip <file>.jsonl.gz` (or read directly via `gzip.open` in Python).
 
 ## Dataset format
 
@@ -19,15 +19,15 @@ Every dataset shares these fields:
 
 ## Dataset Statistics
 
-| Dataset | Rows | Events | Event types | Seq len (min/med/max) | File size |
+| Dataset | Rows | Events | Event types | Seq len (min/med/max) | File size (gz / raw) |
 |---|---:|---:|---:|---|---:|
-| amazon_review_events | 229 | 13,299 | 40 | 50 / 56 / 78 | 4.1 MB |
-| earthquake_region_events | 215 | 10,510 | 8 | 31 / 50 / 50 | 3.7 MB |
-| gdelt_news_events | 179 | 13,779 | 7 | 40 / 82 / 100 | 1.5 MB |
-| github_repo_events | 373 | 25,576 | 8 | 60 / 68 / 80 | 12 MB |
-| github_user_events | 382 | 33,856 | 8 | 80 / 88 / 100 | 17 MB |
-| nba_quarter_events | 286 | 29,102 | 9 | 90 / 103 / 110 | 5.5 MB |
-| wikipedia_edit_events | 276 | 22,063 | 6 | 63 / 80 / 80 | 4.4 MB |
+| amazon_review_events | 229 | 13,299 | 40 | 50 / 56 / 78 | 1.2 MB / 4.1 MB |
+| earthquake_region_events | 215 | 10,510 | 8 | 31 / 50 / 50 | 0.5 MB / 3.7 MB |
+| gdelt_news_events | 179 | 13,779 | 7 | 40 / 82 / 100 | 0.2 MB / 1.5 MB |
+| github_repo_events | 373 | 25,576 | 8 | 60 / 68 / 80 | 2.3 MB / 12 MB |
+| github_user_events | 382 | 33,856 | 8 | 80 / 88 / 100 | 3.5 MB / 17 MB |
+| nba_quarter_events | 286 | 29,102 | 9 | 90 / 103 / 110 | 0.5 MB / 5.5 MB |
+| wikipedia_edit_events | 276 | 22,063 | 6 | 63 / 80 / 80 | 0.7 MB / 4.4 MB |
 
 ### Domain summaries
 
