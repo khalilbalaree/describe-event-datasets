@@ -2,7 +2,7 @@
 
 Seven event-prediction datasets following the temporal point process (TPP) formulation. Each dataset is a JSONL file with one sequence per line; each line describes a marked temporal point process, where every event comes with a natural-language description.
 
-## Common record format
+## Dataset format
 
 Every dataset shares these fields:
 
@@ -17,7 +17,7 @@ Every dataset shares these fields:
 | `time_since_start` | list[float], length `seq_len` | Time elapsed since the first event (units vary; see `metadata.time_unit` when present) |
 | `time_since_last_event` | list[float], length `seq_len` | Inter-arrival time from the previous event |
 
-## Datasets at a glance
+## Dataset Statistics
 
 | Dataset | Rows | Events | Event types | Seq len (min/med/max) | File size |
 |---|---:|---:|---:|---|---:|
